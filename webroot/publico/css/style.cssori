@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  --cor-01: #186ce9;
+  --cor-02: #f2b705;
+  --cor-branco: #fff;
+  --cor-preto: #000;
+  --cor-span: #e7760c;
+}
+
+.section-padding {
+	padding: 85px 0;
+}
+
+.btn-geral {
+	background-color: var(--cor-02);
+	color: var(--cor-branco);
+	padding: 10px 20px;
+}
+
+.btn-geral:hover {
+	background-color: var(--cor-01);
+	color: var(--cor-branco);
+}
+
+/* CONFIG LOGOS NAVBAR */
+
+.navbar img {
+  height: 35px;
+}
+
+.navbar .getstarted {
+	background: #106eea;
+	margin-left: 30px;
+	border-radius: 4px;
+	font-weight: 400;
+	color: #fff;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	line-height: 2.3;
+}
+
+.navbar-nav a {
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+	color: #000;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #000;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #000;
+}
+.w-100 {
+	height: 100vh;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	background: #fff;
+}
+
+/* CONFIG CARROSSEL */
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+}
+.carousel-caption {
+	bottom: 220px;
+	z-index: 2;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 25px;
+}
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+/* CONFIG LOGOS EQUIPAMENTOS */
+
+@keyframes slide {
+from {
+  transform: translateX(0);
+}
+to {
+  transform: translateX(-100%);
+}
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  cursor: pointer;
+  filter: grayscale(1);
+  height: 50px;
+  margin: 0 40px;
+}
+
+.logos-slide img:hover{
+  filter: grayscale(0);
+}
+
+/* FIM CONFIG LOGOS EQUIPAMENTOS */
+
+.pai {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 450px;
+	/* background: var(--cor-02); */
+	background-image: url('../img/carousel-1.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.pai img{
+	filter: blur(15px);
+}
+
+/* .filho {
+	background-color: red;
+	
+} */
+
+.orcamento {
+	background-color: #e7760c;
+	height: 50vh;
+}
+
+
+.material-parallax {
+	position: absolute;
+	top: 0;
+	left: -1px;
+	right: -1px;
+	bottom: 0;
+	z-index: 0;
+}
+
+/* CONFIG BTN WHATSAPP */
+
+.whatsapp {
+  width: auto;
+  position: fixed;
+  top: 85%;
+  right: 1%;
+  padding: 10px;
+  z-index: 10000000;
+}
+
+/* FIM CONFIG BTN WHATSAPP */
